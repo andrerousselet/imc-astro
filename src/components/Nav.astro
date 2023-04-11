@@ -9,13 +9,16 @@ const navData = [
 ---
 
 <nav class="">
-  <ul class="flex items-center justify-between gap-4">
+  <ul class="flex items-center justify-between gap-6">
     {
       navData.map((navItem) => (
         <li>
-          <Link text={navItem.name} href={navItem.path} class="text-neutral-200 text-sm uppercase" />
+          <Link text={navItem.name} href={navItem.path} class="text-sm uppercase transition hover:text-primary" />
         </li>
       ))
     }
+    <li>
+      <Link text="Cursos" href="https://conhecer-deixe-seu-legado.memberkit.com.br/" class="text-neutral-200 text-sm font-medium uppercase rounded-full px-5 py-2.5 bg-primary transition hover:bg-primary-dark hover:text-neutral-50" />
+    </li>
   </ul>
 </nav>
