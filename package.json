@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "imc-astro",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/tailwind": "^3.1.1",
     "astro": "^2.2.2",
+    "astro-icon": "^0.8.0",
     "tailwindcss": "^3.3.1"
   }
 }
