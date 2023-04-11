@@ -1,0 +1,21 @@
+---
+import Link from "./Link.astro";
+
+const navData = [
+  { name: "Home", path: "/" },
+  { name: "Blog", path: "/blog" },
+  { name: "Sobre", path: "/about" },
+];
+---
+
+<nav class="">
+  <ul class="flex items-center justify-between gap-4">
+    {
+      navData.map((navItem) => (
+        <li>
+          <Link text={navItem.name} href={navItem.path} class="text-gray-200 text-sm uppercase" />
+        </li>
+      ))
+    }
+  </ul>
+</nav>
