@@ -1,6 +1,7 @@
 ---
 import Head from "../components/HtmlHead.astro";
 import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
 
 export type Props = {
   title: string;
@@ -16,16 +17,17 @@ const {
 <!DOCTYPE html>
 <html lang="pt-BR">
   <Head {title} {description} />
-  <body>
-    <header class="bg-fuchsia-900">
+  <body class="min-h-screen flex flex-col">
+    <header class="bg-primary">
 			<div class="mx-auto max-w-7xl flex items-center justify-between p-4 sm:p-6">
 				<!-- TODO - replace with logo -->
-				<p class="text-gray-200">IMC LOGO</p>
+				<p class="text-white">IMC LOGO</p>
 				<Nav />
 			</div>
     </header>
-    <main class="mx-auto max-w-7xl p-4 sm:p-6">
+    <main class="mx-auto max-w-7xl p-4 sm:p-6 flex-1">
       <slot />
     </main>
+    <Footer />
   </body>
 </html>
