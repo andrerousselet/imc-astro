@@ -9,6 +9,13 @@ module.exports = {
 			fontFamily: {
         'sans': ['Montserrat', ...defaultTheme.fontFamily.sans],
       },
+			colors: {
+				primary: {
+					DEFAULT: '#873467',
+					light: '#a76f9d',
+					dark: '#512B51',
+				},
+			}
 		},
 	},
 	plugins: [],
