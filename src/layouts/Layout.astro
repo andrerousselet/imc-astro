@@ -1,5 +1,5 @@
 ---
-import Head from "../components/Head.astro";
+import Head from "../components/HtmlHead.astro";
 import Nav from "../components/Nav.astro";
 
 export type Props = {
@@ -24,6 +24,8 @@ const {
 				<Nav />
 			</div>
     </header>
-    <slot />
+    <main class="mx-auto max-w-7xl p-4 sm:p-6">
+      <slot />
+    </main>
   </body>
 </html>
