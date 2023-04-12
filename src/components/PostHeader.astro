@@ -1,0 +1,33 @@
+---
+import type { PostProps } from "../layouts/PostLayout.astro";
+import { slugify, formatDate } from "../js/utils";
+const { title, date, tags, author, image } = Astro.props as PostProps;
+---
+
+<header>
+  <div class="text-center">
+    <h1 class="text-2xl font-semibold mb-2">{title}</h1>
+    <p>
+      por
+      <a
+        href={`/author/${slugify(author)}/`}
+        class="transition hover:text-imc-light"
+      >
+        <span class="underline underline-offset-2">{author}</span>
+      </a>&bull; {formatDate(date)}
+    </p>
+  </div>
+  <div class="flex items-center justify-center gap-2">
+    {
+      tags?.map((tag) => (
+        <a
+          href={`/category/${slugify(tag)}/`}
+          class="px-1.5 rounded uppercase text-neutral-100 text-xs leading-5 bg-imc transition hover:bg-imc-light"
+        >
+          {tag}
+        </a>
+      ))
+    }
+  </div>
+
+</header>
