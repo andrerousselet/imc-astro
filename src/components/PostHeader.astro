@@ -22,7 +22,7 @@ const { title, date, tags, author, image } = Astro.props as PostProps;
       tags?.map((tag) => (
         <a
           href={`/category/${slugify(tag)}/`}
-          class="px-1.5 rounded uppercase text-neutral-100 text-xs leading-5 bg-imc transition hover:bg-imc-light"
+          class="px-1.5 rounded uppercase text-neutral-100 text-xs leading-5 bg-imc transition hover:bg-imc-light hover:text-neutral-50"
         >
           {tag}
         </a>

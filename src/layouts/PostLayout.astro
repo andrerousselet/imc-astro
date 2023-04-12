@@ -24,7 +24,7 @@ const { title, description, date, tags, author, image } = frontmatter;
 
 <Layout {title} {description}>
   <PostHeader {title} {date} {tags} {author} {image} />
-  <section class="mx-auto max-w-4xl">
+  <article>
     <slot />
-  </section>
+  </article>
 </Layout>
