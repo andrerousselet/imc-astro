@@ -1,22 +1,27 @@
 /** @type {import('tailwindcss').Config} */
 
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-	theme: {
-		extend: {
-			fontFamily: {
-        'sans': ['Montserrat', ...defaultTheme.fontFamily.sans],
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ["Montserrat", ...defaultTheme.fontFamily.sans],
       },
-			colors: {
-				primary: {
-					DEFAULT: '#873467',
-					light: '#a76f9d',
-					dark: '#512B51',
+      colors: {
+        imc: {
+          light: "#9f1239",
+          DEFAULT: "#881337",
+          dark: "#4c0519",
+        },
+        tna: {
+					primary: '#3b0764',
+					secondary: '#6b21a8',
+					accent: '#f59e0b'
 				},
-			}
-		},
-	},
-	plugins: [],
-}
+      },
+    },
+  },
+  plugins: [],
+};
