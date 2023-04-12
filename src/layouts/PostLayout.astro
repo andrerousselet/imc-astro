@@ -1,0 +1,30 @@
+---
+import Layout from "./Layout.astro";
+import PostHeader from "../components/PostHeader.astro";
+
+export type PostProps = {
+  title: string;
+  description?: string;
+  date: string;
+  tags?: string[];
+  author: string;
+  image: {
+    url: string;
+    alt: string;
+  };
+};
+
+type PostFrontmatter = {
+  frontmatter: PostProps;
+}
+
+const { frontmatter } = Astro.props as PostFrontmatter;
+const { title, description, date, tags, author, image } = frontmatter;
+---
+
+<Layout {title} {description}>
+  <PostHeader {title} {date} {tags} {author} {image} />
+  <section class="mx-auto max-w-4xl">
+    <slot />
+  </section>
+</Layout>
