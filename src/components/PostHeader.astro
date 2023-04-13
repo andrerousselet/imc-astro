@@ -1,33 +1,42 @@
 ---
 import type { PostProps } from "../layouts/PostLayout.astro";
 import { slugify, formatDate } from "../js/utils";
+import { Image } from "@astrojs/image/components";
 const { title, date, tags, author, image } = Astro.props as PostProps;
 ---
 
 <header>
-  <div class="text-center">
+  <div class="text-center mb-6">
     <h1 class="text-2xl font-semibold mb-2">{title}</h1>
-    <p>
-      por
+    <p class="text-sm">
+      <span>por</span>
       <a
         href={`/author/${slugify(author)}/`}
         class="transition hover:text-imc-light"
       >
         <span class="underline underline-offset-2">{author}</span>
-      </a>&bull; {formatDate(date)}
+      </a>
+      <span>&bull; {formatDate(date)}</span>
     </p>
+    <div class="my-2 flex items-center justify-center gap-2">
+      {
+        tags?.map((tag) => (
+          <a
+            href={`/category/${slugify(tag)}/`}
+            class="text-white leading-5 text-xs px-1.5 rounded bg-imc-tags transition hover:bg-imc-light"
+          >
+            {tag}
+          </a>
+        ))
+      }
+    </div>
   </div>
-  <div class="flex items-center justify-center gap-2">
-    {
-      tags?.map((tag) => (
-        <a
-          href={`/category/${slugify(tag)}/`}
-          class="px-1.5 rounded uppercase text-neutral-100 text-xs leading-5 bg-imc transition hover:bg-imc-light hover:text-neutral-50"
-        >
-          {tag}
-        </a>
-      ))
-    }
-  </div>
-
+  <Image
+    src={image.src}
+    alt={image.alt}
+    width={976}
+    aspectRatio={16 / 9}
+    format="webp"
+    class="rounded border-2 border-white shadow-lg shadow-gray-400 mb-6"
+  />
 </header>
