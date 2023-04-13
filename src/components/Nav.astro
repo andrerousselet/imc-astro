@@ -12,7 +12,7 @@ const navData = [
   <ul class="flex items-center justify-between gap-6">
     {
       navData.map((navItem) => (
-        <li>
+        <li class="hover:scale-110 transition">
           <Link text={navItem.name} href={navItem.path} class="text-sm uppercase transition hover:text-imc-light" />
         </li>
       ))
