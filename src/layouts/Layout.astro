@@ -10,16 +10,16 @@ export type Props = {
 
 const {
   title = "Instituto Medicina Cabalista",
-  description = "Uma medicina milenar, com um olhar sistêmico e integrativo",
+  description = "Transformando a vida pessoal e profissional de terapeutas e aspirantes a terapeutas, por meio do aprendizado e da prática de técnicas milenares de cura da Medicina Cabalista.",
 } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
 <html lang="pt-BR">
   <Head {title} {description} />
-  <body class="min-h-screen flex flex-col bg-neutral-100 text-neutral-700">
+  <body class="min-h-screen flex flex-col bg-neutral-100 text-neutral-700 scrollbar-hide">
     <Header />
-    <main class=" mx-auto max-w-5xl p-4 sm:p-6 flex-1">
+    <main class="mx-auto max-w-5xl p-4 sm:p-6 flex-1">
       <slot />
     </main>
     <Footer />
