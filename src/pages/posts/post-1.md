@@ -5,8 +5,8 @@ date: 2021-05-05
 description: This is the first post of my new Astro blog.
 author: Verônica Malkah
 image:
-    url: "/images/flower.webp"
-    alt: "A purple flower"
+    src: "/images/purple-flower-black-background.jpg"
+    alt: "Flor roxa com fundo preto"
 tags: ["Medicina Cabalista", "Meditação"]
 ---
 
