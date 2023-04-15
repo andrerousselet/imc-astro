@@ -1,0 +1,43 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Picture } from "@astrojs/image/components";
+---
+
+<Layout
+  title="IMC - Onde Estamos"
+  description="Estamos localizados dentro da Serra da Mantiqueira Paulista, local de extrema beleza natural e abundância de biodiversidade."
+>
+  <main class="flex-1">
+    <section class="w-full top-24">
+      <Picture
+        src="/images/sunny-seven-hills.jpg"
+        alt="Sítio Sete Colinas"
+        widths={[2160]}
+        format="webp"
+        aspectRatio={16 / 9}
+      />
+    </section>
+    <section class=`mx-auto max-w-5xl p-4 sm:p-6`>
+      <h1 class="text-3xl mb-2">
+        Um território de aprendizado e transformação
+      </h1>
+      <p>
+        Estamos localizados dentro da Serra da Mantiqueira Paulista, local de
+        extrema beleza natural e abundância de biodiversidade.
+      </p>
+      <p>
+        Depois de 5 longos anos de planejamento, demos o passo decisivo para uma
+        transição de vida com toda a família. Saímos da cidade (Rio de Janeiro)
+        e viemos para a região de São Bento do Sapucaí/SP.
+      </p>
+      <p>
+        Aqui conhecemos a realidade dos pequenos produtores rurais e seus
+        desafios. A produção de alimentos precisa urgentemente ser revista e
+        reformulada. Estamos contribuindo com a produção consciente de
+        alimentos, que vai além da agricultura orgânica, apoiando as compras
+        locais, a economia de transição e o turismo sustentável.
+      </p>
+      <p>Seja parte desse movimento de cura, plenitude e equilíbrio!!</p>
+    </section>
+  </main>
+</Layout>
