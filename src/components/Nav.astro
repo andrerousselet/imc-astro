@@ -2,9 +2,9 @@
 import Link from "./Link.astro";
 
 const navData = [
-  { name: "Home", path: "/" },
+  { name: "Medicina Cabalista", path: "/medicina-cabalista" },
   { name: "Blog", path: "/posts" },
-  { name: "Sobre", path: "/about" },
+  { name: "Onde Estamos", path: "/onde-estamos" },
 ];
 ---
 
@@ -12,8 +12,8 @@ const navData = [
   <ul class="flex items-center justify-between gap-6">
     {
       navData.map((navItem) => (
-        <li class="hover:scale-[1.15] transition duration-300">
-          <Link text={navItem.name} href={navItem.path} class="text-sm uppercase transition hover:text-imc-light" />
+        <li>
+          <Link text={navItem.name} href={navItem.path} class="text-sm uppercase transition duration-200 hover:text-imc-light" />
         </li>
       ))
     }
