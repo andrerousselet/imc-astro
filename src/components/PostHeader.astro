@@ -5,7 +5,7 @@ import { Image } from "@astrojs/image/components";
 const { title, date, tags, author, image } = Astro.props as PostProps;
 ---
 
-<header>
+<header class="mx-auto max-w-5xl p-4 sm:p-6">
   <div class="text-center mb-6">
     <h1 class="text-2xl font-semibold mb-2">{title}</h1>
     <p class="text-sm">
@@ -18,7 +18,7 @@ const { title, date, tags, author, image } = Astro.props as PostProps;
       </a>
       <span>&bull; {formatDate(date)}</span>
     </p>
-    <div class="my-2 flex items-center justify-center gap-2">
+    <div class="mt-4 flex items-center justify-center gap-2">
       {
         tags?.map((tag) => (
           <a
@@ -37,6 +37,6 @@ const { title, date, tags, author, image } = Astro.props as PostProps;
     width={976}
     aspectRatio={16 / 9}
     format="webp"
-    class="rounded border-2 border-white shadow-lg shadow-gray-400 mb-6"
+    class="rounded border-2 border-white shadow-lg shadow-gray-400"
   />
 </header>
