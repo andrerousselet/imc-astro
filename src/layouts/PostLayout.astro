@@ -2,7 +2,7 @@
 import Layout from "./Layout.astro";
 import PostHeader from "../components/PostHeader.astro";
 
-export type PostProps = {
+export type Post = {
   title: string;
   description?: string;
   date: string;
@@ -14,8 +14,8 @@ export type PostProps = {
   };
 };
 
-type PostFrontmatter = {
-  frontmatter: PostProps;
+export type PostFrontmatter = {
+  frontmatter: Post;
 }
 
 const { frontmatter } = Astro.props as PostFrontmatter;
