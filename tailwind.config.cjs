@@ -11,7 +11,6 @@ module.exports = {
       },
       colors: {
         imc: {
-          tags: 'rgb(136, 19, 55, 0.7)',
           light: "#9f1239",
           DEFAULT: "#881337",
           dark: "#4c0519",

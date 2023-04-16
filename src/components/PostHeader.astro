@@ -1,8 +1,8 @@
 ---
-import type { PostProps } from "../layouts/PostLayout.astro";
+import type { Post } from "../layouts/PostLayout.astro";
 import { slugify, formatDate } from "../js/utils";
-import { Image } from "@astrojs/image/components";
-const { title, date, tags, author, image } = Astro.props as PostProps;
+import { Picture } from "@astrojs/image/components";
+const { title, date, tags, author, image } = Astro.props as Post;
 ---
 
 <header class="mx-auto max-w-5xl p-4 sm:p-6">
@@ -23,7 +23,7 @@ const { title, date, tags, author, image } = Astro.props as PostProps;
         tags?.map((tag) => (
           <a
             href={`/category/${slugify(tag)}/`}
-            class="text-white leading-5 text-xs px-1.5 rounded bg-imc-tags transition hover:bg-imc-light"
+            class="text-white leading-5 text-xs px-1.5 rounded bg-imc/80 transition hover:bg-imc-light"
           >
             {tag}
           </a>
@@ -31,10 +31,10 @@ const { title, date, tags, author, image } = Astro.props as PostProps;
       }
     </div>
   </div>
-  <Image
+  <Picture
     src={image.src}
     alt={image.alt}
-    width={976}
+    widths={[976]}
     aspectRatio={16 / 9}
     format="webp"
     class="rounded border-2 border-white shadow-lg shadow-gray-400"
