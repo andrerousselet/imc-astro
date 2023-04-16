@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Picture } from "@astrojs/image/components";
+import { Image } from "@astrojs/image/components";
 ---
 
 <Layout
@@ -9,10 +9,10 @@ import { Picture } from "@astrojs/image/components";
 >
   <main class="flex-1">
     <section class="w-full">
-      <Picture
+      <Image
         src="/images/sunny-seven-hills.jpg"
         alt="Sítio Sete Colinas"
-        widths={[2160]}
+        width={1920}
         format="webp"
         aspectRatio={16 / 9}
       />
