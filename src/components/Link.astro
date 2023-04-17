@@ -1,7 +1,7 @@
 ---
 import { Icon } from "astro-icon";
 
-export type Props = {
+export type LinkProps = {
   text: string;
   href: string;
   target?: string;
@@ -13,7 +13,7 @@ export type Props = {
   size?: number
 };
 
-const { text, href, icon, size, ...rest } = Astro.props as Props;
+const { text, href, icon, size, ...rest } = Astro.props as LinkProps;
 ---
 
 <a {href} {...rest}>
