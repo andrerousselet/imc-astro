@@ -1,0 +1,14 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PostCard from "../../components/PostCard.astro";
+
+const posts = await Astro.glob("./*.md");
+console.log(posts);
+---
+
+<Layout title="IMC - Blog">
+  <main class="mx-auto max-w-6xl p-4 sm:p-6 flex-1">
+    <h1 class="text-3xl font-bold my-8 text-center">Blog</h1>
+    {posts.map((post) => <PostCard {post} />)}
+  </main>
+</Layout>
