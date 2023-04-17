@@ -9,6 +9,11 @@ import Nav from "../components/Nav.astro";
     <a href="/">
       <Icon name="ph:spiral-bold" width="48" height="48" class="text-imc transition duration-300 hover:text-imc-light" />
     </a>
-    <Nav />
+    <div class="hidden md:block">
+      <Nav />
+    </div>
+    <div class="md:hidden">
+      <Icon name="ic:baseline-menu" width="32" height="32" class="text-imc bg-transparent" />
+    </div>
   </div>
 </header>
