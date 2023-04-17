@@ -29,12 +29,11 @@ const { title, author, date, image, tags, description } = frontmatter;
       </a>
       <small class="text-sm">
         <span>por</span>
-        <a href={`/author/${slugify(author)}/`}>
-          <span
-            class="underline underline-offset-2 transition hover:text-imc-light"
-          >
-            {author}
-          </span>
+        <a
+          href={`/author/${slugify(author)}/`}
+          class="transition hover:text-imc-light"
+        >
+          <span class="underline underline-offset-2">{author}</span>
         </a>
         <span>&bull; {formatDate(date)}</span>
       </small>
@@ -45,7 +44,7 @@ const { title, author, date, image, tags, description } = frontmatter;
         tags?.map((tag) => (
           <a
             href={`/category/${slugify(tag)}/`}
-            class="text-white leading-5 text-xs px-1.5 rounded bg-imc/80 transition hover:bg-imc-light"
+            class="text-white leading-5 text-xs px-1.5 rounded bg-imc/80 transition-colors hover:bg-imc-light"
           >
             {tag}
           </a>
