@@ -1,0 +1,56 @@
+---
+import { Image } from "@astrojs/image/components";
+import { slugify, formatDate } from "../js/utils";
+import type { PostFrontmatter } from "../layouts/PostLayout.astro";
+const { frontmatter, url } = Astro.props.post as PostFrontmatter;
+const { title, author, date, image, tags, description } = frontmatter;
+---
+
+<article class="bg-white rounded-md overflow-hidden shadow-md hover:shadow-lg">
+  <a href={url}>
+    <Image
+      src={image.src}
+      alt={image.alt}
+      width={976}
+      height={549}
+      aspectRatio="16:9"
+      format="webp"
+      class="shadow-sm"
+    />
+  </a>
+  <div class="flex flex-col p-3 gap-3">
+    <div>
+      <a href={url}>
+        <h2
+          class="text-lg font-semibold leading-tight hover:text-imc-light transition-colors"
+        >
+          {title}
+        </h2>
+      </a>
+      <small class="text-sm">
+        <span>por</span>
+        <a href={`/author/${slugify(author)}/`}>
+          <span
+            class="underline underline-offset-2 transition hover:text-imc-light"
+          >
+            {author}
+          </span>
+        </a>
+        <span>&bull; {formatDate(date)}</span>
+      </small>
+    </div>
+    <p class="text-sm">{description}</p>
+    <div class="flex flex-wrap gap-2">
+      {
+        tags?.map((tag) => (
+          <a
+            href={`/category/${slugify(tag)}/`}
+            class="text-white leading-5 text-xs px-1.5 rounded bg-imc/80 transition hover:bg-imc-light"
+          >
+            {tag}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</article>
