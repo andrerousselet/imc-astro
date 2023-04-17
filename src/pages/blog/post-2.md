@@ -2,7 +2,7 @@
 layout: "../../layouts/PostLayout.astro"
 title: Pilar de Elos
 date: 2021-05-10
-description: A coluna permite tanto a locomoção, quanto a transmissão de mensagens. Qualquer informação nervosa, passa por dentro da coluna para chegar ao cérebro. Ela é como se fosse um duto de energia elétrica.
+description: A coluna permite tanto a locomoção, quanto a transmissão de mensagens. Qualquer informação nervosa, passa por dentro da coluna para chegar ao cérebro.
 author: Verônica Malkah
 image:
     src: "/images/back-alignment.jpg"

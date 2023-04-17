@@ -2,7 +2,7 @@
 layout: "../../layouts/PostLayout.astro"
 title: Os 3 centros de energia
 date: 2021-05-05
-description: This is the first post of my new Astro blog.
+description: A base da formação do Vigor é estruturada através do estudo de três centros de energia, que abordam as maiores habilidades do ser humano (sentir, pensar e agir).
 author: Verônica Malkah
 image:
     src: "/images/purple-flower-black-background.jpg"
