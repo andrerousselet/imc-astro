@@ -7,7 +7,7 @@ const posts = await Astro.glob("./*.md");
 
 <Layout title="IMC - Blog">
   <main class="mx-auto max-w-6xl p-4 sm:p-6 flex-1">
-    <h1 class="text-3xl font-semibold my-8 text-center">Artigos</h1>
+    <h1 class="text-3xl font-semibold mb-8 text-center">Artigos</h1>
     <section class="grid md:grid-cols-2 gap-6">
       {posts.map((post) => <PostCard {post} />)}
     </section>
