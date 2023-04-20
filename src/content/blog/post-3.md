@@ -1,9 +1,8 @@
 ---
-layout: "../../layouts/PostLayout.astro"
-title: Os prazeres e as dores da vida de terapeuta
-date: 2021-05-11
-description: A estagnação é uma das queixas mais recorrentes, principalmente em relação ao trabalho, a vida profissional, como se nada mudasse, fazendo com que todos os dias parecessem iguais.
-author: Verônica Malkah
+title: "Os prazeres e as dores da vida de terapeuta"
+date: "2021-05-11"
+description: "A estagnação é uma das queixas mais recorrentes, principalmente em relação ao trabalho, a vida profissional, como se nada mudasse, fazendo com que todos os dias parecessem iguais."
+author: "Verônica Malkah"
 image:
   src: "/images/therapists-problems.jpg"
   alt: "Terapeuta e paciente"

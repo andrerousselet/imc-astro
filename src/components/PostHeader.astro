@@ -1,8 +1,8 @@
 ---
-import type { Post } from "../layouts/PostLayout.astro";
 import { slugify, formatDate } from "../js/utils";
 import { Image } from "@astrojs/image/components";
-const { title, date, tags, author, image } = Astro.props as Post;
+import type { BlogPost } from "../schemas/BlogPost";
+const { title, author, date, image, tags } = Astro.props as BlogPost;
 ---
 
 <header class="mx-auto max-w-5xl p-4 sm:p-6">

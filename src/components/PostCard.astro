@@ -1,9 +1,16 @@
 ---
 import { Image } from "@astrojs/image/components";
 import { slugify, formatDate } from "../js/utils";
-import type { PostFrontmatter } from "../layouts/PostLayout.astro";
-const { frontmatter, url } = Astro.props.post as PostFrontmatter;
-const { title, author, date, image, tags, description } = frontmatter;
+import type { CollectionEntry } from "astro:content";
+
+type Props = {
+  post: CollectionEntry<"blog">;
+};
+
+const { data, collection, slug } = Astro.props.post;
+const { title, author, date, image, tags, description } = data;
+
+const url = `/${collection}/${slug}`;
 ---
 
 <article class="bg-white rounded-md overflow-hidden shadow-md hover:shadow-lg">
