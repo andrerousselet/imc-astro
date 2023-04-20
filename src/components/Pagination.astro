@@ -1,0 +1,36 @@
+---
+import Link from "./Link.astro";
+
+const { prevUrl, nextUrl } = Astro.props;
+---
+
+<nav class="flex items-center justify-between gap-6" aria-label="Blog Pages">
+  {
+    (
+      <Link
+        href={prevUrl}
+        text="Anterior"
+        icon={{ name: "ic:baseline-keyboard-arrow-left", side: "left" }}
+        class={`${
+          !prevUrl ? `opacity-50` : `hover:shadow`
+        } text-imc-dark text-xs flex items-center justify-between bg-white pl-1 pr-3 py-1 gap-1 shadow-sm rounded-md`}
+        size={20}
+        disabled={!prevUrl}
+      />
+    )
+  }
+  {
+    (
+      <Link
+        href={nextUrl}
+        text="Próximo"
+        icon={{ name: "ic:baseline-keyboard-arrow-right", side: "right" }}
+        class={`${
+          !nextUrl ? `opacity-50` : `hover:shadow`
+        } text-imc-dark text-xs flex items-center justify-between bg-white pl-3 pr-1 py-1 gap-1 shadow-sm rounded-md`}
+        size={20}
+        disabled={!nextUrl}
+      />
+    )
+  }
+</nav>

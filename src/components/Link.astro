@@ -10,7 +10,8 @@ export type LinkProps = {
     name: string;
     side: "left" | "right";
   };
-  size?: number
+  size?: number;
+  disabled?: boolean;
 };
 
 const { text, href, icon, size, ...rest } = Astro.props as LinkProps;

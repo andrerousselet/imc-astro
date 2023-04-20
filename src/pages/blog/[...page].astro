@@ -1,0 +1,26 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PostCard from "../../components/PostCard.astro";
+import { getCollection, CollectionEntry } from "astro:content";
+import type { GetStaticPaths, Page } from "astro";
+import Pagination from "../../components/Pagination.astro";
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const allPosts = await getCollection("blog");
+  return paginate(allPosts, { pageSize: 2 });
+}) satisfies GetStaticPaths;
+
+const { data, url } = Astro.props.page as Page<CollectionEntry<"blog">>;
+---
+
+<Layout title="IMC - Blog">
+  <main class="mx-auto max-w-6xl p-4 sm:p-6 flex-1">
+    <h1 class="text-3xl font-semibold mb-8 text-center">Artigos</h1>
+    <section class="grid md:grid-cols-2 gap-6">
+      {data.map((post) => <PostCard {post} />)}
+    </section>
+    <section class="flex items-center justify-center m-6 gap-6">
+      <Pagination prevUrl={url.prev} nextUrl={url.next} />
+    </section>
+  </main>
+</Layout>
