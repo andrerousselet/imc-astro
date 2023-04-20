@@ -1,11 +1,7 @@
 ---
 import Layout from "./Layout.astro";
 import PostHeader from "../components/PostHeader.astro";
-import type { CollectionEntry } from "astro:content";
-
-type Props = {
-  post: CollectionEntry<"blog">;
-};
+import type { Props } from "../schemas/BlogPost";
 
 const { post } = Astro.props;
 const { title, author, date, image, tags, description } = post.data;

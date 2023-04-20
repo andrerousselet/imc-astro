@@ -1,4 +1,4 @@
-import { z } from "astro:content";
+import { z, CollectionEntry } from "astro:content";
 
 export const blogPostSchema = z.object({
   title: z.string(),
@@ -13,3 +13,7 @@ export const blogPostSchema = z.object({
 })
 
 export type BlogPost = z.infer<typeof blogPostSchema>
+
+export type Props = {
+  post: CollectionEntry<"blog">;
+};

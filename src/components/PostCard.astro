@@ -1,11 +1,7 @@
 ---
 import { Image } from "@astrojs/image/components";
 import { slugify, formatDate } from "../js/utils";
-import type { CollectionEntry } from "astro:content";
-
-type Props = {
-  post: CollectionEntry<"blog">;
-};
+import type { Props } from "../schemas/BlogPost";
 
 const { data, collection, slug } = Astro.props.post;
 const { title, author, date, image, tags, description } = data;
