@@ -9,7 +9,7 @@ const { title, author, date, image, tags, description } = post.data;
 
 <Layout {title} {description}>
   <PostHeader {title} {author} {date} {image} {tags} />
-  <article class="mx-auto max-w-5xl p-4 sm:p-6">
+  <article class="mx-auto prose prose-slate p-4 sm:p-6">
     <slot />
   </article>
 </Layout>
