@@ -5,7 +5,7 @@ import { navData } from "../data/navData";
 export function DropdownMenu() {
   return (
     <Menu as="nav">
-      <Menu.Button className="text-imc flex items-center">
+      <Menu.Button className="text-imc flex items-center rounded focus:outline-none focus:ring-1 focus:ring-imc focus-visible:ring-1 focus-visible:ring-imc">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="2rem"
@@ -27,13 +27,13 @@ export function DropdownMenu() {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="flex flex-col divide-y divide-neutral-300 absolute top-[5.05rem] sm:top-[6.05rem] right-0 z-10 w-full origin-top-right rounded-b-md bg-neutral-50 shadow-md">
+        <Menu.Items className="flex flex-col divide-y divide-neutral-300 absolute top-[5.05rem] sm:top-[6.05rem] right-0 z-10 w-full origin-top-right rounded-b-md bg-neutral-50 shadow-md focus:outline-none">
           {navData.map((navItem) => (
             <Menu.Item
               as="a"
               key={navItem.path}
               href={navItem.path}
-              className="px-4 py-2 text-imc-dark text-center uppercase"
+              className="px-4 py-2 text-imc-dark text-center uppercase ui-active:bg-imc/5 ui-active:ring-inset ui-active:ring-1 ui-active:ring-imc rounded"
             >
               {navItem.name}
             </Menu.Item>

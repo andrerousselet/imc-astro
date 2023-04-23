@@ -9,7 +9,9 @@ const { title, author, date, image, tags, description } = data;
 const url = `/${collection}/${slug}`;
 ---
 
-<article class="bg-white rounded-md overflow-hidden shadow-md hover:shadow-lg">
+<article
+  class="bg-white rounded-md overflow-hidden shadow-md hover:shadow-lg hover:-translate-y-0.5 transition"
+>
   <a href={url}>
     <Image
       src={image.src}

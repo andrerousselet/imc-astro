@@ -16,14 +16,15 @@ module.exports = {
           dark: "#4c0519",
         },
         tna: {
-					primary: '#3b0764',
-					secondary: '#6b21a8',
-					accent: '#f59e0b'
-				},
+          primary: '#3b0764',
+          secondary: '#6b21a8',
+          accent: '#f59e0b'
+        },
       },
     },
   },
   plugins: [
-    require('tailwind-scrollbar-hide')
+    require('tailwind-scrollbar-hide'),
+    require('@headlessui/tailwindcss')
   ],
 };

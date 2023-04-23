@@ -5,10 +5,20 @@ import Nav from "../components/Nav.astro";
 ---
 
 <header class="bg-neutral-50 shadow-md">
-  <div class="mx-auto max-w-6xl flex items-center justify-between p-4 sm:p-6 relative">
+  <div
+    class="mx-auto max-w-6xl flex items-center justify-between p-4 sm:p-6 relative"
+  >
     <!-- TODO - replace with logo -->
-    <a href="/">
-      <Icon name="ph:spiral-bold" width="48" height="48" class="text-imc transition duration-300 hover:text-imc-light" />
+    <a
+      href="/"
+      class="rounded focus:outline-none focus:ring-1 focus:ring-imc focus-visible:ring-1 focus-visible:ring-imc"
+    >
+      <Icon
+        name="ph:spiral-bold"
+        width="48"
+        height="48"
+        class="text-imc transition duration-300 hover:text-imc-light"
+      />
     </a>
     <div class="hidden md:block">
       <Nav />
